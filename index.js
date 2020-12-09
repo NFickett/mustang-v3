@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000
 
 
 server.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname + './index.html'));
+  res.sendFile(path.join(__dirname + '/public/index.html'));
 })
  
 // << db setup >>
