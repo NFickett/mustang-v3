@@ -11,6 +11,11 @@ server.use(body_parser.json());
 
 const port = 3000;
 
+
+server.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname + '/index.html'));
+})
+ 
 // << db setup >>
 const db = require("./db");
 const dbName = "mustangv3";
@@ -56,9 +61,6 @@ server.get("/items", (request, response) => {
 }, function(err) { // failureCallback
   throw (err);
 });
-server.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/index.html'));
-})
 
 
 server.listen(port, () => {
