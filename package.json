@@ -16,7 +16,8 @@
     "express": "^4.17.1",
     "mongod": "^2.0.0",
     "mongodb": "^3.6.3",
-    "monk": "^7.3.2"
+    "monk": "^7.3.2",
+    "path": "^0.12.7"
   },
   "description": ""
 }
