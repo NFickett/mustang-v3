@@ -12,7 +12,7 @@ server.use(body_parser.json());
 const port = process.env.PORT || 3000
 
 
-server.get('/', (req, res) => {
+server.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname + './index.html'));
 })
  
