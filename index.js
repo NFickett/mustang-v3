@@ -4,7 +4,7 @@ const server = express();
 var path = require('path');
 const ObjectId =require('mongodb').ObjectId;
 server.use(express.static(__dirname + '/public'))
-//const body_parser = require("body-parser");
+const body_parser = require("body-parser");
 
 // parse JSON (application/json content-type)
 server.use(body_parser.json());
