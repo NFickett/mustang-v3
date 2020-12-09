@@ -7,7 +7,7 @@ server.use(express.static(__dirname + '/public'))
 const body_parser = require("body-parser");
 
 // parse JSON (application/json content-type)
-//server.use(body_parser.json());
+server.use(body_parser.json());
 
 const port = process.env.PORT || 3000
 
