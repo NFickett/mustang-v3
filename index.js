@@ -1,9 +1,9 @@
 
 const express = require("express");
 const server = express();
-var path = require('path');
 const ObjectId =require('mongodb').ObjectId;
 server.use(express.static(__dirname + '/public'))
+
 const body_parser = require("body-parser");
 
 // parse JSON (application/json content-type)
@@ -12,8 +12,8 @@ server.use(body_parser.json());
 const port = process.env.PORT || 3000
 
 
-server.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/public/index.html'));
+server.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname + '/index.html'));
 })
  
 // << db setup >>
