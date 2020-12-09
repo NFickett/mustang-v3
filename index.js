@@ -1,9 +1,9 @@
 
 const express = require("express");
 const server = express();
+var path = require('path');
 const ObjectId =require('mongodb').ObjectId;
 server.use(express.static(__dirname + '/public'))
-var path = require('path');
 const body_parser = require("body-parser");
 
 // parse JSON (application/json content-type)
